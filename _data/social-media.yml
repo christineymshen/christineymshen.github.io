@@ -2,28 +2,28 @@ email:
   id: 'yueming.shen@duke.edu'
   href: 'mailto:'
   title: 'Email'
-  fa-icon: 'fa-envelope-square'
+  fa-icon: 'fas fa-envelope-square'
 
 github:
   id: 'christineymshen'
   href: 'https://github.com/'
   title: 'GitHub'
-  fa-icon: 'fa-github-square'
+  fa-icon: 'fab fa-github-square'
 
 linkedin:
   id: 'christine-ym-shen'
   href: 'https://www.linkedin.com/in/'
   title: 'LinkedIn'
-  fa-icon: 'fa-linkedin'
+  fa-icon: 'fab fa-linkedin'
 
 facebook:
   id: 'christine.ym.shen'
   href: 'https://www.facebook.com/'
   title: 'Facebook'
-  fa-icon: 'fa-facebook-square'
+  fa-icon: 'fab fa-facebook-square'
 
 instagram:
   id: 'christine.ym.shen'
   href: 'https://www.instagram.com/'
   title: 'Instagram'
-  fa-icon: 'fa-instagram-square'
+  fa-icon: 'fab fa-instagram-square'

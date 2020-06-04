@@ -1,7 +1,7 @@
 ---
 layout: about
 permalink: /
-title: Christine Shen
+title: <strong>Christine</strong> Shen
 description: <a href="">"Let yourself be silently drawn by the strange pull of what you really love. It will not lead you astray." -- Rumi</a>. 
 
 profile:
