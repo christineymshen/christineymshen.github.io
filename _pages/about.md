@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: Christine Shen
-description: <a href="">Master Student in Statistical Science at Duke University.</a>. 
+description: <a href="">"Let yourself be silently drawn by the strange pull of what you really love. It will not lead you astray." -- Rumi</a>. 
 
 profile:
   align: right
