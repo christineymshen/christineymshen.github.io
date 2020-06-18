@@ -55,6 +55,13 @@ $pink:              #f92080 !default;
 $light-pink:        #ffdddd !default;
 $yellow:            #efcc00 !default;
 
+// Added by CS
+$charcoal:			#264653;
+$greensheen:		#81B29A;
+$midnightgreen:		#1A535C;
+$lawdavidblue:		#05a9c5; // link color on david lab website
+$anothergreen:		#728639; // random green color
+
 $white:             #fff !default;
 $dark-gray:         #333 !default;
 $mid-gray:          #666 !default;
@@ -70,7 +77,7 @@ $darken-2:          rgba(#000,.125) !default;
 $darken-3:          rgba(#000,.25) !default;
 $darken-4:          rgba(#000,.5) !default;
 
-$theme-color:       $purple;
+$theme-color:       $anothergreen;
 $code-color:        $dark-gray;
 $text-color:        $mid-gray;
 $background-color:  white;

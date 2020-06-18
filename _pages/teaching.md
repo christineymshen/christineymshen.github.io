@@ -1,10 +1,20 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Teaching
+#description: Materials for courses you taught. Replace this text with your description.
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+#### **2020 Summer I**:
 
-Organize your courses by years, topics, or universities, however you like!
+STA 230 - Probability - Teaching Assistant
+
+#### **2020 Spring**:
+
+STA 323 - Statistical Computing - Research Assistant
+
+#### **2019 Fall**:
+
+STA 440 - Case Studies in the Practice of Statistics - Guest Lecturer on Web Scrapping
+
+
