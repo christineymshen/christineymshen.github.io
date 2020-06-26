@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /biography/
+permalink: /Biography/
 title: Biography
 #description: Materials for courses you taught. Replace this text with your description.
 ---
