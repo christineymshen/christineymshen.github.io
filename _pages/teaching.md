@@ -1,19 +1,23 @@
 ---
 layout: page
-permalink: /teaching/
+permalink: /Teaching/
 title: Teaching
 #description: Materials for courses you taught. Replace this text with your description.
 ---
 
-#### **2020 Summer I**:
+#### **2020 Summer II**
+
+STA 360/ 602 - Bayesian and Modern Statistics - Teaching Assistant
+
+#### **2020 Summer I**
 
 STA 230 - Probability - Teaching Assistant
 
-#### **2020 Spring**:
+#### **2020 Spring**
 
 STA 323 - Statistical Computing - Research Assistant
 
-#### **2019 Fall**:
+#### **2019 Fall**
 
 STA 440 - Case Studies in the Practice of Statistics - Guest Lecturer on Web Scrapping
 
