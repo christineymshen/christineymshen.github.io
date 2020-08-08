@@ -5,6 +5,10 @@ title: Teaching
 #description: Materials for courses you taught. Replace this text with your description.
 ---
 
+#### **2020 Fall**
+
+STA 602 - Bayesian and Modern Statistics - Teaching Assistant
+
 #### **2020 Summer II**
 
 STA 360/ 602 - Bayesian and Modern Statistics - Teaching Assistant

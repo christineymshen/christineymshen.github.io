@@ -17,8 +17,8 @@ news: true
 social: true
 ---
 
-I am currently a first year Master student in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University.
+I am currently a second year Master student in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University.
 
 My research interests are still developing. I enjoy studying statistical theory and I'm broadly interested in applications of statistics in social science. I find myself drawn to further studies of mathematics. I like coding, especially algorithmic optimization -- I'm obsessed with (even just temporarily) reducing entropy in my life in every possible way. Generally I'm curious to learn about different perspectives to look at the world.
 
-Currently I'm working on a research project in Bayesian inference on relational data.
+Currently I'm working on a research project in application of variational inference on Probit random effect model.
