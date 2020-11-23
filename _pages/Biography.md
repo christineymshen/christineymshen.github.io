@@ -15,5 +15,5 @@ Fellow of Society of Actuaries, 2014
 
 Chartered Enterprise Risk Analyst, 2015
 
-Chartered Financial Analyst, 2018
+Chartered Financial Analyst, 2018-2019
 
