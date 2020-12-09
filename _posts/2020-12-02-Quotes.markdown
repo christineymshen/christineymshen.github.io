@@ -1,0 +1,15 @@
+---
+layout: post
+title:  Quotes
+date:   2020-12-02 22:33
+description: funfacts
+---
+
+I will put random quotes I like here until I can figure out a better place for them.
+
+<blockquote>
+    I like crossing the imaginary boundaries people set up between different fields — it’s very refreshing.
+    —Maryam Mirzakhani (1977-2017)
+</blockquote>
+
+I came over this while watching an introductory video on algebraic geometry. Link [here](https://www.nationalacademies.org/event/05-14-2019/math-frontiers-webinar-algebraic-geometry){:target="_blank"}.
