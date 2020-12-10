@@ -18,7 +18,7 @@ While coding for HWs or projects, I always wonder what's the *best* practice. Be
 
 During the semester, most of the time I need to get something done before certain deadline -- accuracy is far more important than effiency. So I usually just focus on correctness and couldn't afford spending too much time figuring out the optimal syntax. But I've always hoped to be able to pick up good coding habits early, since the efforts saved will be compounding in time. 
 
-Now it's winter break and while working on my research project, I happened to be going through another round of exercise to *microbenchmark* codes to cut runtime. I know that if I don't take notes, I'll soon remember these findings and later be wondering about the same things again. So here I want to summarize all the tips I've noticed so far in terms of efficient R programming. I hope I will come back and update the list every now and then and maintain it. But I can also well imagine that I'll give up on it or just forget about it and this post ends up being a one-time thing. Let's see how it goes.
+Now it's winter break and while working on my research project, I happened to be going through another round of exercise to *microbenchmark* codes to cut runtime. I know that if I don't take notes, I'll soon forget these findings and later be wondering about the same things again. So here I want to summarize all the tips I've noticed so far in terms of efficient R programming. I hope I will come back and update the list every now and then and maintain it. But I can also well imagine that I'll give up on it or just forget about it and this post ends up being a one-time thing. Let's see how it goes.
 
 
 ### Resources
@@ -59,7 +59,7 @@ log(dnorm(a)), dnorm(a, log=T)
 
 To generate multivariate normal random numbers. I checked the performance of this function in three packages: `amen`, `mvtnorm` and `Rfast`. `mvtnorm` is way too slow. `amen` and `Rfast` are both much faster, but `amen` is definitely the fastest. 
 
-("Shall I add that I'll use `amen` even if it's not the fastest just for sheer affection?"<br>"No don't do that please...") 
+("Can I add that I'll use `amen` even if it's not the fastest just for sheer affection?"<br>"No don't do that please..."<br>"Well, I've already done so anyway"<br>"What can I say ..." [eyes rolling]) 
 
 4.`rowSums`
 
@@ -67,7 +67,7 @@ While `rowSums` is definitely much faster compared to using `apply` and its frie
 
 5.Boolean operator across columns/ by row
 
-For some reasons I've been using `rowSums` to check this, e.g., rowSum = number of col to check everything is TRUE across all columns in a row. This is clearly not the efficient. 
+For some reasons I've been using `rowSums` to check this, e.g., rowSum = number of col to check everything is TRUE across all columns in a row. This is clearly not efficient. 
 
 One alternative is
 
@@ -77,20 +77,20 @@ a[,1] & a[,2]
 
 But I assume this only works when you only have a few columns, you won't want to enumerate all the columns. In any case, the best I've found for now is again from `matrixStats` package, `rowAnys` and `rowAlls`. I really like this package :)
 
-However, to calculate product across columns/ by row, so far I'm still sticking to `a[,1] * a[,2]`. The `matrixStats` version `rowProds` is quite slow compared to this. Maybe it's got some other functionalities...
+However, to calculate product across columns/ by row, so far I'm still sticking to `a[,1] * a[,2]`. The `matrixStats` version `rowProds` is quite slow compared to this. Maybe it's intended for some other more complicated scenarios.
 
 6.Matrix initialization
 
-Usually I need to initialize a matrix of the size that is same as one input variable within a function. A few things to note here:
+Usually I need to initialize a matrix of the size that is same as one of the input variables in a function. A few things to note here:
 
   - if I really need to get the dimension from the input variable, `dim(M)[1]` is faster than `nrow(M)`. But if M is a vector, nothing beats `length(M)`
-  - if I just want to initialize a matrix that's the same size in order to store results later (presumably I'd want to do this because later I need to use subset on this variable, otherwise I won't need to particularly initializ a variable), it's faster to use `res <- M * 0` rather than `res <- matrix(0, dim(M)[1], dim(M)[2])`
+  - if I just want to initialize a matrix that's the same size in order to store results later (presumably I'd want to do this because later I need to do subsetting on this variable, otherwise I won't need to particularly initializ a variable), it's faster to use `res <- M * 0` rather than `res <- matrix(0, dim(M)[1], dim(M)[2])`
   
-These things don't matter much if you only need to do it once, but it's noticeable if you are calling this funtion a gazillion times in your run (I almost feel I'm oblidged to add a reference here on using the word *gazillion*).
+These things don't matter much if you only need to do it once, but they have noticeabl impact on runtime if you are calling a particular funtion a gazillion times in your run (I almost feel I'm oblidged to add a reference here on using the word *gazillion*).
 
 7.Maximum across columns/ by row
 
-I started using `mapply(max,vec_a, vec_b)`. It's sooooo painfully slow. An alternative is the very basic `pmax` funtion from base R. Another alternative is `Pmax` function from the `Rfast` package. It seems that `Pmax` is marginally faster compared to `pmax`. But so far this is the only function I might want to use in `Rfast`, so I decided not to use it for now since once loaded, it masks a few other functions in other commonly used packages and this behaviour makes me very uncomfortable.
+I started by using `mapply(max,vec_a, vec_b)`. It's sooooo painfully slow. An alternative is the very basic `pmax` funtion from base R. Another alternative is `Pmax` function from the `Rfast` package. It seems that `Pmax` is marginally faster compared to `pmax`. But so far this is the only function I might want to use in `Rfast`, so I decided not to use it for now since once loaded, it masks a few other functions in other commonly used packages and this behaviour makes me very uncomfortable.
 
 8.`&&` vs `&`
 
