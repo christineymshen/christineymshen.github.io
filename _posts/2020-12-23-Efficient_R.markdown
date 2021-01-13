@@ -49,28 +49,32 @@ Now it's winter break and while working on my research project, I happened to be
 
 4. RStudio autocompletion. This is interesting. I like the autocompletion function in the editor, but I hate the function in RStudio Console. For some reason, auto-completion isn't working properly there. Most of the time while working in the Console, after I type of half of the function name or whatever, RStudio will give me a list of things it guesses I might want to type, which is helpful. But after I select one, it usually won't replace the part I've already typed and this is just horrible. It always leaves me with something like "rnornorm". I'd have to go back to remove the first part myself. Alternativelly I'll have to insist typing everythign myself while RStudio happily showing off its guess list, covering part of my screen and making it hard for me to type. I once asked a friend whether he knows how to get rid of this. He said he's aware of it and also had no idea how. 
 
-  - type Tab to find out the list of suggestions from autocompletion, and then use Tab again to confirm your selection. 
-  - noted that RStudio autocompletion isn't case sensitive which is the case for base R console
-  - RStudio is also able to find hidden files in the subfolder
+    - type Tab to find out the list of suggestions from autocompletion, and then use Tab again to confirm your selection. 
+    - noted that RStudio autocompletion isn't case sensitive which is the case for base R console
+    - RStudio is also able to find hidden files in the subfolder
     
 5. section 2.5 recommends making use of the `Project` feature. I've decided to give it a go. [20210113] So far I like the project set up better. It's easier whenever I need to resume from other work. I don't need to manually set the working directory. And it forces me to use a structure that is more suited for my project.
 
 ### Efficient programming
 
-1. [20201229] In section 3.6.1, the book touches on function closures. And this happens to be something I've been looking for. The background is ... I have a function, say `f`, which essentially does linear interpolation based on pre-stored values in a huge look-up table. I need to load the look-up table object before calling this function. I've been loading it in the global environment so that whenever I call `f`, it'd be able to access the table. However, I'm also aware of how undesirable it is to directly write into the global environment. And after I came across the following in section 6 of the book R Inferno ... I decide to try to change, since I don't have a boss turning red with anger over me ... 
+<ol>
+
+<li> [20201229] In section 3.6.1, the book touches on function closures. And this happens to be something I've been looking for. The background is ... I have a function, say `f`, which essentially does linear interpolation based on pre-stored values in a huge look-up table. I need to load the look-up table object before calling this function. I've been loading it in the global environment so that whenever I call `f`, it'd be able to access the table. However, I'm also aware of how undesirable it is to directly write into the global environment. And after I came across the following in section 6 of the book R Inferno ... I decide to try to change, since I don't have a boss "turning red with anger over me" ... 
+
+    So after researching for the whole evening. I finally start to understand closures and implemented it in my codes. I feel like I might need to think about these things more to get myself comfortable with the ideas of enclosing, binding, execution and calling environment etc. 
 
 <blockquote>
 If you think you need "<<-", think again. If on reflection you still think you need "<<-", think again. Only when your boss turns red with anger over you not doing anything should you temporarily give in to the temptation.
 </blockquote>
-
-    So after researching for the whole evening. I finally start to understand closures and implemented it in my codes. I feel like I might need to think about these things more to get myself comfortable with the ideas of enclosing, binding, execution and calling environment etc. 
-  
-2. Section 3.7 of ERG talks about making use of compiler to speed up codes. Basically we can always use the byte compiler that comes with R. A bit like JIT when I was learning python. Obviously when I have a suite of almost 20 functions, I won't want to go through each one of them and `cmpfun()` them. A simple way to use byte compiler (see here)[https://www.r-statistics.com/2012/04/speed-up-your-r-code-using-a-just-in-time-jit-compiler/]{:target="_blank"} is to simply add the following at the beggining of your codes. I tried with my function, not obvious speed up thus far. As most documention points out, this kind of compiler works best on those notorious "bad codes" which uses of loooooooops, which, nobody in real life does.
+</li>
+<li> Section 3.7 of ERG talks about making use of compiler to speed up codes. Basically we can always use the byte compiler that comes with R. A bit like JIT when I was learning python. Obviously when I have a suite of almost 20 functions, I won't want to go through each one of them and `cmpfun()` them. A simple way to use byte compiler <a href="https://www.r-statistics.com/2012/04/speed-up-your-r-code-using-a-just-in-time-jit-compiler/" target="_blank">see here</a> is to simply add the following at the beggining of your codes. I tried with my function, not obvious speed up thus far. As most documention points out, this kind of compiler works best on those notorious "bad codes" which uses of loooooooops, which, nobody in real life does.
 
 {% highlight r %}
 library(compiler)
 enableJIT(3)
 {% endhighlight r %}
+</li>
+</ol>
 
 ### Efficient workflow
 
@@ -168,7 +172,7 @@ The former is the scalar version of the latter, just like `||` and `|`. Note fro
 
 Refer to ERG, `anyNAs` is more efficient.
 
-10. return list instead of vector
+10.return list instead of vector
 [20201225 updates]
 
 In one of the functions that gets called very very often, I need to pass back 2 or 3 numbers. Potentially I can either pass back through a list, or a vector.
@@ -197,7 +201,7 @@ With 20000 passes, f1 is slightly slower compared to f3, median time 24 vs 21 mi
 
 (I'm listening to Anastasia while working now. I suspect I might have typed completely nonsensible/ grammarly incorrect sentences ...)
 
-11. Order of numerical and logical comparisons
+11.Order of numerical and logical comparisons
 
 Let a, b, c all be vectors of length m. I want to have an (m x 1) boolean vector d = (a<c) or (b<c). I wonder which way is faster
 
@@ -212,15 +216,15 @@ d <- Rfast::pmin(a,b) < c
 
 Tested the first one takes 1/3 time.
 
-12. initialize logical vector
+12.initialize logical vector
 
 `rep(TRUE,m)` is slightly faster compared to `!logical(m)` if I want to initialize a logical vector of TRUE of length m.
 
-13. matrix inverse
+13.matrix inverse
 
 If the matrix is symmetric, which is the case for me most of the time now anyway, then it's faster to use `chol2inv(chol(M))` compared to `solve(M)`. Microbenchmarking shows that it takes less than half the time.
 
-### I'm still wondering about ... 
+## I'm still wondering about ... 
 
 1. When I subset a matrix using indicators, sometimes if there's only one item left, the matrix will automatically collapse into a vector. In order to avoid the lost of dimension, I use `drop=F`. But I don't know whether this will lead to inefficiency in codes. 
 
