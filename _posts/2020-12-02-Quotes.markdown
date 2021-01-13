@@ -8,8 +8,17 @@ description: funfacts
 I will put random quotes I like here until I can figure out a better place for them.
 
 <blockquote>
-    I like crossing the imaginary boundaries people set up between different fields — it’s very refreshing.
-    —Maryam Mirzakhani (1977-2017)
+    I like crossing the imaginary boundaries people set up between different fields — it’s very refreshing. <br>
+    — Maryam Mirzakhani (1977-2017)
 </blockquote>
 
 I came over this while watching an introductory video on algebraic geometry. Link [here](https://www.nationalacademies.org/event/05-14-2019/math-frontiers-webinar-algebraic-geometry){:target="_blank"}.
+
+<blockquote>
+    The best thing about being a statistician is that you get to play in everyone's backyard.<br>
+    - John Tukey
+</blockquote>
+
+Came across this [here](https://www.youtube.com/watch?v=qxdGIA8qZ0A){:target="_blank"}. 
+
+I don't particularly feel strongly for this, just think it's an interesting thought. The idea of, if I suddenly become interested in a certain field, and then I can just shift gears to that field and utilize my quantitative skills there, is kind of uncomfortable to me. Going into something new always sounds stressful to me. I guess this boils down to my subconscious stubborn belief that I need to be able to understand everything myself in order to get work done.
