@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Christine Shen | Efficient R Programming</title>
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+  
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico?">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2020/Efficient_R/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        
+        <strong>Christine</strong> Shen
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="/">About</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">Posts</a>
+
+        <!-- Pages -->
+        
+          
+            <a class="page-link" href="/biography/">Biography</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="/projects/">Projects</a>
+          
+        
+          
+            <a class="page-link" href="/teaching/">Teaching</a>
+          
+        
+          
+        
+          
+        
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Efficient R Programming</h1>
+    <p class="post-meta">December 9, 2020</p>
+  </header>
+
+  <article class="post-content">
+    <p>Last updated: 13/01/2020.</p>
+
+<p>Notes:</p>
+<ol>
+  <li>For this post, I intend to just note down whatever that comes to my mind without paying too much attention on the English</li>
+  <li>Somehow the KaTeX isn’t working with my current set up. So I can’t use math mode in this post. Will try to figure this out later. One thing at a time. And I really don’t like this feeling that I need to work with things I don’t understand</li>
+  <li>Not familiar enough with markdown and html, in the following sections, I’m deliberately not making use of markdown list since I want to have code chunks in each ordered list item. Haven’t figured out how to make that work</li>
+</ol>
+
+<p>I have taken computing classes in both R and Python. But don’t know why I find R is the natural choice for me if I get to choose. I don’t know whether it’s partly because we took the R programming course before the python one and we needed to use R for all the assignments in the first semester. But I also had exposures in python before starting graduate school, yet I didn’t particularly prefer it. Or it could be I was just too annoyed by jupyter notebook, and the weird shortcut keys of Spyder on macbook. Anyway, for now I always use R if I can.</p>
+
+<p>R is … notorious for its flexibility. Having worked with python which shouts at me every other minute when I use some wrong syntax, or C++ which shouts every few seconds, R never complains much. You can use all sorts of syntax, it’ll try its best to interpret and give you some results, which, of course could very well be quite different from what you intended if you aren’t careful. And almost always, there are more than one ways to do things.</p>
+
+<p>While coding for HWs or projects, I always wonder what’s the <em>best</em> practice. Best in terms of efficiency and also readability/ elegance in style. Sometimes you can’t achieve both at the same time, then I’m curious what would be an optimal compromise.</p>
+
+<p>During the semester, most of the time I need to get something done before certain deadline – accuracy is far more important than effiency. So I usually just focus on correctness and couldn’t afford spending too much time figuring out the optimal syntax. But I’ve always hoped to be able to pick up good coding habits early, since the efforts saved will be compounding in time.</p>
+
+<p>Now it’s winter break and while working on my research project, I happened to be going through another round of exercise to <em>microbenchmark</em> codes to cut runtime. I know that if I don’t take notes, I’ll soon forget these findings and later be wondering about the same things again. So here I want to summarize all the tips I’ve noticed so far in terms of efficient R programming. I hope I will come back and update the list every now and then and maintain it. But I can also well imagine that I’ll give up on it or just forget about it and this post ends up being a one-time thing. Let’s see how it goes.</p>
+
+<h2 id="resources">Resources</h2>
+
+<p>1.<a href="https://csgillespie.github.io/efficientR/" target="_blank">Efficient R programming</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I came across this book while looking for tips on effient R coding. If possible I'd want to read the whole book. But so far I've only carefully studied chapter 7. In the following section, I use ERG to refer to this book.
+</code></pre></div></div>
+
+<p>2.<a href="http://adv-r.had.co.nz/" target="_blank">Advanced R</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This book is occasionally referred to by ERG. So far I scanned through the sections on Environments and Closures. Quite helpful.
+</code></pre></div></div>
+
+<p>3.<a href="https://www.burns-stat.com/pages/Tutor/R_inferno.pdf" target="_blank">R inferno</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is another book referenced in ERG. I read a little bit to understand Closures. It's a fun read.
+</code></pre></div></div>
+
+<h2 id="erg-reading-notes">ERG Reading Notes</h2>
+
+<h3 id="r-studio-set-up">R Studio set up</h3>
+
+<ol>
+  <li>
+    <p>Global option, “General” tab, <code class="language-plaintext highlighter-rouge">Restore .RData</code>. I followed the suggestion and turned this off. Occaisionally when I happened to be working with large data sets/ results, it could take quite a while when I start a R session. It’s fine if I still need to work with these data, but sometimes it could be annoying if these come from the a project I’ve been working on and I don’t really want to go back there. For some reasons whenever I open a new R session, it seems by default will go back to the last project… and hence will load these data I most likely won’t need.</p>
+  </li>
+  <li>
+    <p>I also changed my code editing option to get rid of autocompletion of braces. Sometimes this is actually helpful, but most of the time I find this feature very annoying …</p>
+  </li>
+  <li>
+    <p>I then updated font size from 10 to 12 … getting older isn’t it …</p>
+  </li>
+  <li>
+    <p>RStudio autocompletion. This is interesting. I like the autocompletion function in the editor, but I hate the function in RStudio Console. For some reason, auto-completion isn’t working properly there. Most of the time while working in the Console, after I type of half of the function name or whatever, RStudio will give me a list of things it guesses I might want to type, which is helpful. But after I select one, it usually won’t replace the part I’ve already typed and this is just horrible. It always leaves me with something like “rnornorm”. I’d have to go back to remove the first part myself. Alternativelly I’ll have to insist typing everythign myself while RStudio happily showing off its guess list, covering part of my screen and making it hard for me to type. I once asked a friend whether he knows how to get rid of this. He said he’s aware of it and also had no idea how.</p>
+
+    <ul>
+      <li>type Tab to find out the list of suggestions from autocompletion, and then use Tab again to confirm your selection.</li>
+      <li>noted that RStudio autocompletion isn’t case sensitive which is the case for base R console</li>
+      <li>RStudio is also able to find hidden files in the subfolder</li>
+    </ul>
+  </li>
+  <li>
+    <p>section 2.5 recommends making use of the <code class="language-plaintext highlighter-rouge">Project</code> feature. I’ve decided to give it a go. [20210113] So far I like the project set up better. It’s easier whenever I need to resume from other work. I don’t need to manually set the working directory. And it forces me to use a structure that is more suited for my project.</p>
+  </li>
+</ol>
+
+<h3 id="efficient-programming">Efficient programming</h3>
+
+<ol>
+
+<li> [20201229] In section 3.6.1, the book touches on function closures. And this happens to be something I've been looking for. The background is ... I have a function, say `f`, which essentially does linear interpolation based on pre-stored values in a huge look-up table. I need to load the look-up table object before calling this function. I've been loading it in the global environment so that whenever I call `f`, it'd be able to access the table. However, I'm also aware of how undesirable it is to directly write into the global environment. And after I came across the following in section 6 of the book R Inferno ... I decide to try to change, since I don't have a boss "turning red with anger over me" ... 
+
+    So after researching for the whole evening. I finally start to understand closures and implemented it in my codes. I feel like I might need to think about these things more to get myself comfortable with the ideas of enclosing, binding, execution and calling environment etc. 
+
+<blockquote>
+If you think you need "&lt;&lt;-", think again. If on reflection you still think you need "&lt;&lt;-", think again. Only when your boss turns red with anger over you not doing anything should you temporarily give in to the temptation.
+</blockquote>
+</li>
+<li> Section 3.7 of ERG talks about making use of compiler to speed up codes. Basically we can always use the byte compiler that comes with R. A bit like JIT when I was learning python. Obviously when I have a suite of almost 20 functions, I won't want to go through each one of them and `cmpfun()` them. A simple way to use byte compiler <a href="https://www.r-statistics.com/2012/04/speed-up-your-r-code-using-a-just-in-time-jit-compiler/" target="_blank">see here</a> is to simply add the following at the beggining of your codes. I tried with my function, not obvious speed up thus far. As most documention points out, this kind of compiler works best on those notorious "bad codes" which uses of loooooooops, which, nobody in real life does.
+
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">library</span><span class="p">(</span><span class="n">compiler</span><span class="p">)</span><span class="w">
+</span><span class="n">enableJIT</span><span class="p">(</span><span class="m">3</span><span class="p">)</span></code></pre></figure>
+
+</li>
+</ol>
+
+<h3 id="efficient-workflow">Efficient workflow</h3>
+
+<p>For most of the stuff in this chapter, I’ve learned them through the hard ways and am practicing already. But there’s one point it reminds me of: the importance of regression tests.</p>
+
+<p>For example in my current project, I’ve been frequently adding in new algorithms/ functionalities to my code. And often times the newly added codes are inter-linked with existing ones since I usually want to make use of any existing codes that’s still useful. Then how can I be sure that the old functions still work as I expected and that nothing breaks? I really need to think about how to build in regression tests in a project. And every time I make changes to a function, major or minor, I should be able to do a few quick routine tests to at least by 80% sure that whatever used to work is still working.</p>
+
+<p>ERG mentions in this chapter that treating your project as a dummy package is one (time-consuming) way to pick up good habits which will benefit you in the long run. Um … It’s worth trying. Especially what the author mentioned as “dummy package”. But somehow I’ve got a mental block on building package ever since I took the 1-credit course last sem. Let’s see …</p>
+
+<h2 id="general-thoughts">General thoughts</h2>
+
+<ol>
+  <li>
+    <p>if I only need to use 1-2 functions in a package, especially a package that I’m not very familiar with, or less commonly used, it seems better just to call the function using <code class="language-plaintext highlighter-rouge">namespace::function</code> rather than loading the package. Safer, less drama;</p>
+  </li>
+  <li>
+    <p>Use R script files for all my functions so that it’s easier to debug. Use rmd mainly for write up and generating graphs;</p>
+  </li>
+  <li>
+    <p>It’s nice to use defensive programming, i.e., make use of asser_that etc., but take note that this function is very slow, you don’t want to put it in a function which you’ll be calling for a million times.</p>
+  </li>
+</ol>
+
+<h2 id="what-ive-already-tested">What I’ve already tested</h2>
+
+<p>1.<code class="language-plaintext highlighter-rouge">ifelse</code></p>
+
+<p>I use this a lot because it looks very elegant. But as mentioned in ERG, it’s not computationally efficient. For example,</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">ind</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">ifelse</span><span class="p">(</span><span class="n">Y</span><span class="o">==</span><span class="m">1</span><span class="p">,</span><span class="m">1</span><span class="p">,</span><span class="m">-1</span><span class="p">)</span></code></pre></figure>
+
+<p>is not as efficient as this (assuming m and n are the dimension of Y)</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">ind</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">matrix</span><span class="p">(</span><span class="m">-1</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="w">
+</span><span class="n">ind</span><span class="p">[</span><span class="n">Y</span><span class="o">==</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="m">1</span></code></pre></figure>
+
+<p>Or if the variavble Y is a vector, can make use of dplyr <code class="language-plaintext highlighter-rouge">if_else</code> function. This function doesn’t work as well when Y is a matrix since the output results is always an 1-dim long vector. More detailed examples can be found in ERG. [20201229] Another undesirable thing about <code class="language-plaintext highlighter-rouge">if_else</code> is, it appears to always evaluate both TRUE and FALSE results irregardless of the conditional statements. This can be undesirable if for example, when the statement is TRUE, we might not even have evaluated some of the objects there.</p>
+
+<p>[20210104] This way is slightly faster:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">ind</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="m">-1</span><span class="p">)</span><span class="o">^</span><span class="n">Y</span></code></pre></figure>
+
+<p>2.log of normal density</p>
+
+<p>The following are similar in terms of runtime.</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="nf">log</span><span class="p">(</span><span class="n">dnorm</span><span class="p">(</span><span class="n">a</span><span class="p">)),</span><span class="w"> </span><span class="n">dnorm</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">log</span><span class="o">=</span><span class="nb">T</span><span class="p">)</span></code></pre></figure>
+
+<p>But, definitely go with <code class="language-plaintext highlighter-rouge">dnorm(a, log=T)</code> or pnorm(a, log.p=T)` when dealing with tail distribution, or if you are working with the log space. Much better numerical stability. And … could be actually more efficient given the form of the normal pdf.</p>
+
+<p>3.<code class="language-plaintext highlighter-rouge">rmvnorm</code> function</p>
+
+<p>To generate multivariate normal random numbers. I checked the performance of this function in three packages: <code class="language-plaintext highlighter-rouge">amen</code>, <code class="language-plaintext highlighter-rouge">mvtnorm</code> and <code class="language-plaintext highlighter-rouge">Rfast</code>. <code class="language-plaintext highlighter-rouge">mvtnorm</code> is way too slow. <code class="language-plaintext highlighter-rouge">amen</code> and <code class="language-plaintext highlighter-rouge">Rfast</code> are both much faster, but <code class="language-plaintext highlighter-rouge">amen</code> is definitely the fastest.</p>
+
+<p>Tested the <code class="language-plaintext highlighter-rouge">Rfast::dmvnorm</code> takes only about 1/4 the time of <code class="language-plaintext highlighter-rouge">mvtnorm::dmvnorm</code>. Really should try to avoid using <code class="language-plaintext highlighter-rouge">mvtnorm</code> whenver possible.</p>
+
+<p>4.<code class="language-plaintext highlighter-rouge">rowSums</code></p>
+
+<p>While <code class="language-plaintext highlighter-rouge">rowSums</code> is definitely much faster compared to using <code class="language-plaintext highlighter-rouge">apply</code> and its friends, it’s not the most efficient. <code class="language-plaintext highlighter-rouge">rowSums2</code> in the <code class="language-plaintext highlighter-rouge">matrixStats</code> package is better.</p>
+
+<p>5.Boolean operator across columns/ by row</p>
+
+<p>For some reasons I’ve been using <code class="language-plaintext highlighter-rouge">rowSums</code> to check this, e.g., rowSum = number of col to check everything is TRUE across all columns in a row. This is clearly not efficient.</p>
+
+<p>One alternative is</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">a</span><span class="p">[,</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">[,</span><span class="m">2</span><span class="p">]</span></code></pre></figure>
+
+<p>But I assume this only works when you only have a few columns, you won’t want to enumerate all the columns. In any case, the best I’ve found for now is again from <code class="language-plaintext highlighter-rouge">matrixStats</code> package, <code class="language-plaintext highlighter-rouge">rowAnys</code> and <code class="language-plaintext highlighter-rouge">rowAlls</code>. I really like this package :)</p>
+
+<p>However, to calculate product across columns/ by row, so far I’m still sticking to <code class="language-plaintext highlighter-rouge">a[,1] * a[,2]</code>. The <code class="language-plaintext highlighter-rouge">matrixStats</code> version <code class="language-plaintext highlighter-rouge">rowProds</code> is quite slow compared to this. Maybe it’s intended for some other more complicated scenarios.</p>
+
+<p>6.Matrix initialization</p>
+
+<p>Usually I need to initialize a matrix of the size that is same as one of the input variables in a function. A few things to note here:</p>
+
+<ul>
+  <li>if I really need to get the dimension from the input variable, <code class="language-plaintext highlighter-rouge">dim(M)[1]</code> is faster than <code class="language-plaintext highlighter-rouge">nrow(M)</code>. But if M is a vector, nothing beats <code class="language-plaintext highlighter-rouge">length(M)</code></li>
+  <li>if I just want to initialize a matrix that’s the same size in order to store results later (presumably I’d want to do this because later I need to do subsetting on this variable, otherwise I won’t need to particularly initializ a variable), it’s faster to use <code class="language-plaintext highlighter-rouge">res &lt;- M * 0</code> rather than <code class="language-plaintext highlighter-rouge">res &lt;- matrix(0, dim(M)[1], dim(M)[2])</code></li>
+</ul>
+
+<p>These things don’t matter much if you only need to do it once, but they have noticeabl impact on runtime if you are calling a particular funtion a gazillion times in your run (I almost feel I’m oblidged to add a reference here on using the word <em>gazillion</em>).</p>
+
+<p>7.Maximum across columns/ by row</p>
+
+<p>I started by using <code class="language-plaintext highlighter-rouge">mapply(max,vec_a, vec_b)</code>. It’s sooooo painfully slow. An alternative is the very basic <code class="language-plaintext highlighter-rouge">pmax</code> funtion from base R. Another alternative is <code class="language-plaintext highlighter-rouge">Pmax</code> function from the <code class="language-plaintext highlighter-rouge">Rfast</code> package. It seems that <code class="language-plaintext highlighter-rouge">Pmax</code> is marginally faster compared to <code class="language-plaintext highlighter-rouge">pmax</code>. But so far this is the only function I might want to use in <code class="language-plaintext highlighter-rouge">Rfast</code>, so I decided not to use it for now since once loaded, it masks a few other functions in other commonly used packages and this behaviour makes me very uncomfortable.</p>
+
+<p>8.<code class="language-plaintext highlighter-rouge">&amp;&amp;</code> vs <code class="language-plaintext highlighter-rouge">&amp;</code></p>
+
+<p>The former is the scalar version of the latter, just like <code class="language-plaintext highlighter-rouge">||</code> and <code class="language-plaintext highlighter-rouge">|</code>. Note from ERG that if use <code class="language-plaintext highlighter-rouge">a || b</code>, R doens’t evaluate <code class="language-plaintext highlighter-rouge">b</code> if <code class="language-plaintext highlighter-rouge">a</code> is TRUE. while for <code class="language-plaintext highlighter-rouge">|</code>, the second argument will always be evaluated. So we should try to the non-vectorized version whenever possible.</p>
+
+<p>9.<code class="language-plaintext highlighter-rouge">is.na()</code> vs <code class="language-plaintext highlighter-rouge">anyNAs</code></p>
+
+<p>Refer to ERG, <code class="language-plaintext highlighter-rouge">anyNAs</code> is more efficient.</p>
+
+<p>10.return list instead of vector
+[20201225 updates]</p>
+
+<p>In one of the functions that gets called very very often, I need to pass back 2 or 3 numbers. Potentially I can either pass back through a list, or a vector.</p>
+
+<p>If I use list, I can easily retrieve the parameters through their names, it would be clear and less prone to mistakes. But I wonder whether the structure of list would slow down the process.</p>
+
+<p>If I use vector, I would need to retrieve the parameters by syntax such as <code class="language-plaintext highlighter-rouge">res[1]</code>. I guess it’d be faster compared to using list, or at least as fast, but then there’s a risk that if the order of the parameters are accidentally switched, it might lead to mistakes hard to discover. Alternatively, I can also assign names to elements of vector and try to retrieve through names as <code class="language-plaintext highlighter-rouge">res["a"]</code>.</p>
+
+<p>I wonder how much difference does returning list or vector make. If there are differences, whether it’s worthwhile for losing codes readability. And if there’s no difference at all, indeed I’ll go with using list.</p>
+
+<p>I tested using three simple functions:</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">f1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">){</span><span class="w">
+  </span><span class="nf">list</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">f2</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">){</span><span class="w">
+  </span><span class="nf">c</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="o">=</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span><span class="n">f3</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="k">function</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">){</span><span class="w">
+  </span><span class="nf">c</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<p>With 20000 passes, f1 is slightly slower compared to f3, median time 24 vs 21 milliseconds. f2 is definitely slowest, doubles the time. So all in all, I think it’s not worthwhile to use vector just for saving such little time but risk running into error some later time.</p>
+
+<p>(I’m listening to Anastasia while working now. I suspect I might have typed completely nonsensible/ grammarly incorrect sentences …)</p>
+
+<p>11.Order of numerical and logical comparisons</p>
+
+<p>Let a, b, c all be vectors of length m. I want to have an (m x 1) boolean vector d = (a&lt;c) or (b&lt;c). I wonder which way is faster</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">&lt;</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="o">&lt;</span><span class="n">c</span><span class="p">)</span></code></pre></figure>
+
+<p>or</p>
+
+<figure class="highlight"><pre><code class="language-r" data-lang="r"><span class="n">d</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">Rfast</span><span class="o">::</span><span class="n">pmin</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">c</span></code></pre></figure>
+
+<p>Tested the first one takes 1/3 time.</p>
+
+<p>12.initialize logical vector</p>
+
+<p><code class="language-plaintext highlighter-rouge">rep(TRUE,m)</code> is slightly faster compared to <code class="language-plaintext highlighter-rouge">!logical(m)</code> if I want to initialize a logical vector of TRUE of length m.</p>
+
+<p>13.matrix inverse</p>
+
+<p>If the matrix is symmetric, which is the case for me most of the time now anyway, then it’s faster to use <code class="language-plaintext highlighter-rouge">chol2inv(chol(M))</code> compared to <code class="language-plaintext highlighter-rouge">solve(M)</code>. Microbenchmarking shows that it takes less than half the time.</p>
+
+<h2 id="im-still-wondering-about-">I’m still wondering about …</h2>
+
+<ol>
+  <li>When I subset a matrix using indicators, sometimes if there’s only one item left, the matrix will automatically collapse into a vector. In order to avoid the lost of dimension, I use <code class="language-plaintext highlighter-rouge">drop=F</code>. But I don’t know whether this will lead to inefficiency in codes.</li>
+</ol>
+
+
+  </article>
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2021 Christine Shen.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<!-- <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous" />
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-XXXXXXXXX', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+
+</html>
