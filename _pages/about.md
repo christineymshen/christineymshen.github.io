@@ -15,6 +15,6 @@ My research interests are still developing. My interests lie broadly at the inte
 
 I enjoy studying statistical theory and hope to be able to develop theory and methodologies myself. I find myself drawn to further studies of mathematics. I like coding, especially algorithmic optimization -- I'm obsessed with (even just temporarily) reducing entropy in my life in every possible way. Generally I'm curious to learn about different perspectives to look at the world.
 
-Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summer days. I'm slowly brownion-motioning in things I'm interested in, and fortunately with people I like, a lot. 
+Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summer days. I'm slowly brownion-motioning in things I'm interested in.
 
 The icon of my webpage is the Chinese character of my last name, said to be written by [Wang XiZhi](http://www.sfds.cn/6C88/1025905.html), or at least in his calligraphy style I guess.

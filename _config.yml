@@ -75,6 +75,10 @@ news_limit: 5
 markdown: kramdown
 highlighter: pygments
 
+# 20210510
+kramdown:
+  math_engine: katex
+
 # Includes & excludes
 include: ['_pages']
 exclude: [vendor]
