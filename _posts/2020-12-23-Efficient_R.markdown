@@ -25,17 +25,17 @@ Now it's winter break and while working on my research project, I happened to be
 
 ## Resources
 
-1. [Efficient R programming](https://csgillespie.github.io/efficientR/){:target="_blank"}
+1.[Efficient R programming](https://csgillespie.github.io/efficientR/){:target="_blank"}
 
-  - I came across this book while looking for tips on effient R coding. If possible I'd want to read the whole book. But so far I've only carefully studied chapter 7. In the following section, I use ERG to refer to this book.
+    I came across this book while looking for tips on effient R coding. If possible I'd want to read the whole book. But so far I've only carefully studied chapter 7. In the following section, I use ERG to refer to this book.
   
-2. [Advanced R](http://adv-r.had.co.nz/){:target="_blank"}
+2.[Advanced R](http://adv-r.had.co.nz/){:target="_blank"}
 
-  - This book is occasionally referred to by ERG. So far I scanned through the sections on Environments and Closures. Quite helpful.
+    This book is occasionally referred to by ERG. So far I scanned through the sections on Environments and Closures. Quite helpful.
   
-3. [R inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf){:target="_blank"}
+3.[R inferno](https://www.burns-stat.com/pages/Tutor/R_inferno.pdf){:target="_blank"}
 
-  - This is another book referenced in ERG. I read a little bit to understand Closures. It's a fun read.
+    This is another book referenced in ERG. I read a little bit to understand Closures. It's a fun read.
   
 ## ERG Reading Notes
 

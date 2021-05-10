@@ -5,14 +5,23 @@ date:   2020-12-02 22:33
 description: funfacts
 ---
 
+Last update: 20210509
+
 I will put random quotes I like here until I can figure out a better place for them.
+
+<blockquote>
+  Science is a way of thinking much more than it is a body of knowledge.<br>
+    - Carl Sagan
+</blockquote>
+
+I came across this in the book "Algorithms to live by" by Tom Griffiths and Brian Christian.
 
 <blockquote>
     I like crossing the imaginary boundaries people set up between different fields — it’s very refreshing. <br>
     — Maryam Mirzakhani (1977-2017)
 </blockquote>
 
-I came over this while watching an introductory video on algebraic geometry. Link [here](https://www.nationalacademies.org/event/05-14-2019/math-frontiers-webinar-algebraic-geometry){:target="_blank"}.
+I came across this while watching an introductory video on algebraic geometry. Link [here](https://www.nationalacademies.org/event/05-14-2019/math-frontiers-webinar-algebraic-geometry){:target="_blank"}.
 
 <blockquote>
     The best thing about being a statistician is that you get to play in everyone's backyard.<br>
