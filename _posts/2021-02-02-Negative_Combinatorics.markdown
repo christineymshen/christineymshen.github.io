@@ -5,11 +5,11 @@ date:   2021-02-02 14:54
 description: explorations
 ---
 
-I came across *Negative Combinatorics* while working on HW1 from STA 732. It's just one technique needed (after googling) to get me through the problem set, but somehow I find it far more interesting than the problem set.
+I came across *Negative Combinatorics* while working on STA 732 HW1. It's just one technique needed (after googling) to get me through the problem set, but somehow I find it far more interesting than the problem set (with all due respect to 732).
 
-Updated 20210514
+[Updated 20210514] I started this on the date of HW1 submission (and that date is special for at least two other reasons). Now I'm finishing it up in May after the whole semester has ended, and that I have finally managed to change the setup from KaTex to MathJax ... 
 
-I started this on the date of HW1 submission (and that date is special for at least two other reasons). And now I'm finishing it up in May after the whole semester has ended. 
+---
 
 Suppose a set S has n elements, number of subsets of S of size k is:
 

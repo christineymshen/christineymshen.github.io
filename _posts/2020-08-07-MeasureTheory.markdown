@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Measure Theory
+title:  Measure Theory Course
 date:   2020-08-07 21:35
-description: course, direction
+description: courses, thoughts
 ---
 
 Every once a while I get myself into the situation where I need to make a choice. I clearly know the pros and cons, I (sort of) know what I want to do, yet my mind keeps asking "what if"?
