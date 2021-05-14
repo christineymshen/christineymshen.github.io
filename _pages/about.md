@@ -13,7 +13,7 @@ I have just completed my Master's degree from the [Department of Statistical Sci
 
 My research interests are still developing. I'm fascinated by the mystery of the mind. I'm interested in understanding Consciousness, and I hope to use quantitative tools to better understand the human minds. 
 
-I enjoy studying statistical theory and hope to be able to develop theory and methodologies. I find myself drawn to further studies of mathematics. I like coding, especially algorithmic optimization -- I'm obsessed with (even just temporarily) reducing entropy in my life in every possible way. Generally I'm curious to learn about different perspectives to look at the world.
+I enjoy studying statistical theory and hope to be able to develop theories and methodologies. I find myself drawn to further studies of mathematics. I like coding, especially algorithmic optimization -- I'm obsessed with (even just temporarily) reducing entropy in my life in every possible way. Generally I'm curious to learn about different perspectives to look at the world.
 
 Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summer days. And I'm slowly brownion-motioning in things I'm interested in.
 
