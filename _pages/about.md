@@ -15,7 +15,7 @@ My research interests are still developing. I'm fascinated by the mystery of the
 
 I enjoy studying statistical theory and hope to be able to develop theories and methodologies. I find myself drawn to further studies of mathematics. I like coding, especially algorithmic optimization -- I'm obsessed with (even just temporarily) reducing entropy in my life in every possible way. Generally I'm curious to learn about different perspectives to look at the world.
 
-Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summer days. And I'm slowly brownion-motioning in things I'm interested in.
+Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summer days. And I'm slowly brownion-motioning in things I find interesting.
 
 Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, tennis, and meditation.
 
