@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Quotes
+title:  Random Quotes
 date:   2021-05-16 07:50
 description: funfacts
 ---

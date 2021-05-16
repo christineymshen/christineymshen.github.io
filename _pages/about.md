@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 title: <strong>Christine</strong> Shen
-description: <a href="">"Let yourself be silently drawn by the strange pull of what you really love. It will not lead you astray." - Rumi</a>.
+description: <a href="">"You are more marvelous in your simple wish to find a way, than the gilded roofs of any destination you could reach." -- David Whyte, "Santiago"</a>.
 
 news: true
 social: true
