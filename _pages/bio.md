@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /biography/
-title: Biography
+title: Bio
 #description: 
 ---
 
