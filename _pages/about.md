@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 title: <strong>Christine</strong> Shen
-description: <a href="">"You are more marvelous in your simple wish to find a way, than the gilded roofs of any destination you could reach." -- David Whyte, "Santiago"</a>.
+description: <a href="">"You are more marvelous in your simple wish to find a way <br> than the gilded roofs of any destination you could reach." &nbsp;&nbsp;-- David Whyte, <i>"Santiago"</i></a>.
 
 news: true
 social: true
@@ -17,6 +17,6 @@ I enjoy studying statistical theory and hope to be able to develop theories and 
 
 Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summer days. And I'm slowly brownion-motioning in things I find interesting.
 
-Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, tennis, and meditation.
+Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, meditation, and tennis.
 
 <sub>The icon on this webpage is the Chinese character of my last name, said to be written by [Wang XiZhi](http://www.sfds.cn/6C88/1025905.html), or at least in his calligraphy style I guess.</sub>
