@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Quotes
-date:   2021-05-09 22:33
+date:   2021-05-16 07:50
 description: funfacts
 ---
 
@@ -10,11 +10,20 @@ I will put random quotes here until I can figure out a better place for them.
 ---
 
 <blockquote>
+  Let yourself be silently drawn by the strange pull of what you really love. It will not lead you astray.<br>
+    — Rumi
+</blockquote>
+
+20210516: This has been on my main page in the last year. Served its purpose during the period when I was not sure whether I should have changed my track.
+
+---
+
+<blockquote>
   Science is a way of thinking much more than it is a body of knowledge.<br>
     — Carl Sagan
 </blockquote>
 
-20210509: I came across this in the book "Algorithms to live by" by Tom Griffiths and Brian Christian. In a way, this reassures that it doesn't matter that much as to which path I'll be taking, as long as I haven't given up exploring. 
+20210509: I came across this in the book "Algorithms to live by" by Tom Griffiths and Brian Christian. In a way, this reassures that maybe it doesn't matter that much as to which path I'll be taking, as long as I haven't given up exploring. I guess I knew this all the time, just hasn't been able to practice this philosophy.
 
 ---
 

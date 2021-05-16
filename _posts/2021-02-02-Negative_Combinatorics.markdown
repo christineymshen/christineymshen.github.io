@@ -42,7 +42,7 @@ $$
 
 Now we need to show that the number of unique multisets by choosing k from m elements, is indeed $$ {m+k-1 \choose k} $$. We can use a counting method called "stars and bars". This might be rather basic, but it's the first time I come across this idea. I find it quite interesting. 
 
-Now assume I want to choose n elements from 2, because the order isn't important, so this is equivalent to ... imagine we have n stars, lying in one line
+Now think about choosing k from 2 negative elements. As the order doesn't matter here, this is equivalent to ... imagine we have k stars, lying in one line
 
 $$ * * * \dots * * * $$
 
@@ -50,7 +50,7 @@ We want to put one bar in between to separate these stars into two groups, for e
 
 $$ * | * * \dots * * * $$
 
-How many different ways are there to place this bar? This is exactly equivalent to the problem above. Here there are a total of (n+1) places for me to place this bar, and hence it's $$ {n+1 \choose 1} = {n+2-1 \choose 2-1}$$ number of different possibilities. And if we generalize it an (m choose k) problem, obviously the answer is
+How many different ways are there to place this bar? This is exactly equivalent to the problem above. Here there are a total of (k+1) places for me to place this bar, and hence it's $$ {k+1 \choose 1} = {2+k-1 \choose 2-1}$$ number of different possibilities. And if we generalize it an (m choose k) problem, obviously the answer is
 
 $$
   {m+k-1 \choose m-1} = {m+k-1 \choose k}.
@@ -62,7 +62,7 @@ This also works for hybrid sets, i.e., sets with both positive and negative elem
 + a positive element can only be chosen once, with weight 1
 + a negative element can be chosen any number of times, with weight (-1)
 
-For example, consider set S = {a, x, y} where a is a positive element, while x and y are negative elements. Therefore in total S has (-1) elements. So how many subsets (potentially multisets) of size 3 does S have?
+For example, consider a set S = {a, x, y} where a is a positive element, while x and y are negative elements. In total S has (-1) elements. So how many subsets (potentially multisets) of size 3 does S have?
 
 1. For subsets with only negative elements, each subset/ multiset has weight of $$ (-1)^3 = (-1) $$ and there are a total of 4 subsets
 2. For subsets with one positive element a, and two negative elements, the weight is 1, and there are a total of 3 subsets.
