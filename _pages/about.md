@@ -3,7 +3,7 @@ layout: about
 title: about
 permalink: /
 title: <strong>Christine</strong> Shen
-description: <a href="">"You are more marvelous in your simple wish to find a way, than the gilded roofs of any destination you could reach." -- David Whyte, "Santiago".</a>
+description: <a href="">"You are more marvelous in your simple wish to find a way, than the gilded roofs of any destination you could reach." -- David Whyte, "Santiago"</a>.
 
 news: true
 social: true
