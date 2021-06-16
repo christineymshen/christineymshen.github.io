@@ -19,4 +19,4 @@ Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summe
 
 Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, meditation, and tennis.
 
-<sub>The icon on this webpage is the Chinese character of my last name, said to be written by [Wang XiZhi](http://www.sfds.cn/6C88/1025905.html), or at least in his calligraphy style I guess.</sub>
+<h5>The icon on this webpage is the Chinese character of my last name, said to be written by Xizhi Wang, or at least in his calligraphy style I guess.</h5>

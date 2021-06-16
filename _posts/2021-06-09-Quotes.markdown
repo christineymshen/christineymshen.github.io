@@ -1,11 +1,19 @@
 ---
 layout: post
 title:  Random Quotes
-date:   2021-05-16 07:50
-description: funfacts
+date:   2021-06-09 07:50
+description: random
 ---
 
 I will put random quotes here until I can figure out a better place for them.
+
+---
+<blockquote>
+  Immer mit den einfachsten Beispielen anfangen.<br>
+    — David Hilbert
+</blockquote>
+
+20210609: "Always start with the simplest examples." Came across this in M.Artin's Algebra book. This is also one of the important things I've learned (and hope I'll remember to practice it) from working on a research project in the past year.
 
 ---
 
@@ -14,7 +22,7 @@ I will put random quotes here until I can figure out a better place for them.
     — Rumi
 </blockquote>
 
-20210516: This has been on my main page in the last year. Served its purpose during the period when I was not sure whether I should have changed my track.
+20210516: This has been on my main page in the past year. Served its purpose when I was not sure whether I should have changed my track. I'm still not 100% sure, but it's passed a certain statistically significant threshold for me to take it down here for now.
 
 ---
 
