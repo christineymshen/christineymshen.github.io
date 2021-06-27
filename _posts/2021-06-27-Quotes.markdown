@@ -1,11 +1,24 @@
 ---
 layout: post
 title:  Random Quotes
-date:   2021-06-09 07:50
+date:   2021-06-27 09:22
 description: random
 ---
 
 I will put random quotes here until I can figure out a better place for them.
+
+---
+<blockquote>
+  "Would you tell me, please, which way I ought to go from here?"<br>
+  “That depends a good deal on where you want to get to,” said the Cat.<br>
+  “I don’t much care where —” said Alice. <br>
+  “Then it doesn’t matter which way you go,” said the Cat. <br>
+  “—so long as I get somewhere,” Alice added as an explanation. <br>
+  “Oh, you’re sure to do that, if you only walk long enough.” <br>
+    — Alice in Wonderland, Chapter 6, Pig and Pepper
+</blockquote>
+
+20210627: "you are sure to get somewhere ..."
 
 ---
 <blockquote>
