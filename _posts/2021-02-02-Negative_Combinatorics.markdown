@@ -7,7 +7,7 @@ description: explorations
 
 I came across *Negative Numbers in Combinatorics* while working on STA 732 HW1. It's just one technique needed (after googling) to get me through the problem set, but somehow I find it far more interesting than the problem set (with all due respect to 732).
 
-[Updated 20210514] I started this on the date of HW1 submission (and that date is special for at least two other reasons). Now I'm finishing it up in May after the whole semester has ended, and that I have finally managed to change the setup from KaTex to MathJax ... 
+[Updated 20210514] I started this on the date of HW1 submission, and now I'm finishing it up in May after the whole semester has ended, and that I have finally managed to change the setup from KaTex to MathJax ... 
 
 ---
 
