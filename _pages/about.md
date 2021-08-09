@@ -9,13 +9,9 @@ news: true
 social: true
 ---
 
-I have just completed my Master's degree from the [Department of Statistical Science](https://stat.duke.edu/) at Duke University. I will start my PhD (a.k.a. permanent head damage) here in August. 
-
-My research interests are still developing. I'm fascinated by the mystery of the mind. I'm interested in understanding Consciousness, and I hope to use quantitative tools to better understand the human minds. 
+I am a first year Ph.D. student in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University. My research interests are still developing. I'm interested in understanding Consciousness, and I hope to use quantitative tools to better understand the human minds. 
 
 I enjoy studying statistical theory and hope to be able to develop theories and methodologies. I find myself drawn to further studies of mathematics. I like coding, especially algorithmic optimization -- I'm obsessed with (even just temporarily) reducing entropy in my life in every possible way. Generally I'm curious to learn about different perspectives to look at the world.
-
-Currently I'm enjoying my cannot-go-back-home-yet-still-hope-it-never-ends summer days. And I'm slowly brownion-motioning in things I find interesting.
 
 Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, meditation, and tennis.
 

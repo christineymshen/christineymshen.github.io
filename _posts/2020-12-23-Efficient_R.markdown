@@ -5,7 +5,7 @@ date:   2020-12-09 14:54
 description: coding, R
 ---
 
-Last updated: 13/01/2020.
+Last updated: 26/07/2021.
 
 Notes:
 1. For this post, I intend to just note down whatever that comes to my mind without paying too much attention on the English
@@ -223,6 +223,10 @@ Tested the first one takes 1/3 time.
 13.matrix inverse
 
 If the matrix is symmetric, which is the case for me most of the time now anyway, then it's faster to use `chol2inv(chol(M))` compared to `solve(M)`. Microbenchmarking shows that it takes less than half the time.
+
+14.`as.numeric` vs `drop`
+
+I need to remove singleton dimensions from an 1-by-1 matrix. I've been using the function `drop`, but out of curiosity, I tested `as.numeric` today, and suprisingly it only takes about 1/3 the time. 
 
 ## I'm still wondering about ... 
 

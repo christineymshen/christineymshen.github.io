@@ -5,6 +5,10 @@ title: Teaching
 #description: Materials for courses you taught. Replace this text with your description.
 ---
 
+#### **2021 Fall**
+
+STA 199 - Intro to Data Science - Teaching Assistant
+
 #### **2021 Spring**
 
 STA 532 - Theory of Inference - Teaching Assistant
