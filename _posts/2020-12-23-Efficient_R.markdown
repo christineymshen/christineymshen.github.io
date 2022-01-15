@@ -224,9 +224,11 @@ Tested the first one takes 1/3 time.
 
 If the matrix is symmetric, which is the case for me most of the time now anyway, then it's faster to use `chol2inv(chol(M))` compared to `solve(M)`. Microbenchmarking shows that it takes less than half the time.
 
-14.`as.numeric` vs `drop`
+14.`as.numeric` vs `drop` vs `c`
 
 I need to remove singleton dimensions from an 1-by-1 matrix. I've been using the function `drop`, but out of curiosity, I tested `as.numeric` today, and suprisingly it only takes about 1/3 the time. 
+
+[20211014] And it's even faster to just use `c`.
 
 ## I'm still wondering about ... 
 
