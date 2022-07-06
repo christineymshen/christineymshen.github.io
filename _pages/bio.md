@@ -13,9 +13,9 @@ M.S. in Statistics (2021), Duke University
 
 #### **Qualifications**
 
-Fellow of Society of Actuaries, 2014
+Fellow of Society of Actuaries, 2014-2021
 
-Chartered Enterprise Risk Analyst, 2015
+Chartered Enterprise Risk Analyst, 2015-2021
 
 Chartered Financial Analyst, 2018-2019
 
