@@ -14,5 +14,3 @@ I am a first year Ph.D. student in the [Department of Statistical Science](https
 I enjoy studying statistical theory and hope to be able to develop theories and methodologies. I find myself drawn to further studies of mathematics. I like coding, especially algorithmic optimization -- I'm obsessed with (even just temporarily) reducing entropy in my life in every possible way. Generally I'm curious to learn about different perspectives to look at the world.
 
 Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, meditation, and tennis.
-
-<h5>The icon on this webpage is the Chinese character of my last name, said to be written by Xizhi Wang, or at least in his calligraphy style I guess.</h5>
