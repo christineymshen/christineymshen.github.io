@@ -5,11 +5,10 @@ title: Teaching
 #description: Materials for courses you taught. Replace this text with your description.
 ---
 
-<!---#### **2022 Fall**
+#### **2022 Fall**
 
-STA 101 - Data Analysis/ Stat Inference - Head TA <br />
+STA 199 - Intro to Data Science - Head TA<br />
 MSS Math & Stat Bootcamp - Instructor
--->
 
 #### **2021 Fall**
 
