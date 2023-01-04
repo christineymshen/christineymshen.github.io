@@ -5,8 +5,6 @@ description:
 img: /assets/img/proj_2.jpg
 ---
 
-### **Overview**
-
 This is the Final Project for STA 523 (2019 Fall).
 
 This is a group project where four of us put together a music app with four gadgets, including music search by artist, genre, lyrics analysis using NLP techniques and music recommendation based on peronality test.

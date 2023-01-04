@@ -5,8 +5,6 @@ description:
 img: /assets/img/proj_3.jpg
 ---
 
-### **Overview**
-
 This is the Final Project for STA 663 (2020 Spring). This is a group project where two of us implemented the basic Variational Auto-encoder algorithm described in [Kingma and Welling (2013)](https://arxiv.org/abs/1312.6114){:target="_blank"}. This implementation uses a Gaussian MLP encoder and a Bernoulli MLP decoder. The set up is suitable for dataset like [MNIST](http://yann.lecun.com/exdb/mnist/){:target="_blank"}. 
 
 We also implemented a python package. It relies on `numpy`, `matplotlib` and `numba`. 
