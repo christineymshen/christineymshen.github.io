@@ -5,6 +5,14 @@ title: Teaching
 #description: Materials for courses you taught. Replace this text with your description.
 ---
 
+#### **2023 Fall**
+
+STA 832 - Multivariate Analysis - TA
+
+#### **2023 Summer**
+
+MSS Virtual Math & Stat Bootcamp - Instructor
+
 #### **2023 Spring**
 
 STA 732 - Statistical Inference - TA
