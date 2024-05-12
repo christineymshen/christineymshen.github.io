@@ -8,10 +8,7 @@ title: Teaching
 #### **2023 Fall**
 
 STA 832 - Multivariate Analysis - TA
-
-#### **2023 Summer**
-
-MSS Virtual Math & Stat Bootcamp - Instructor
+Virtual MSS Math & Stat Bootcamp - Instructor
 
 #### **2023 Spring**
 

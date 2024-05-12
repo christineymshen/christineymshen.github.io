@@ -10,7 +10,7 @@ news: false
 social: true
 ---
 
-I am a third year Ph.D. student in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University working with [Surya Tokdar](http://www2.stat.duke.edu/~st118/). My research interests are still developing. I'm broadly interested in statistical inference and Bayesian methods. I'm generally curious to learn about different perspectives to understand the world.
+I am a third year Ph.D. candidate in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University working with [Surya Tokdar](http://www2.stat.duke.edu/~st118/). My research interests are still developing. I'm broadly interested in statistical inference and Bayesian methods. I'm generally curious to learn about different perspectives to understand the world.
 
 Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, tennis, and wall climbing. 
 
