@@ -45,6 +45,6 @@ STA 323 - Statistical Computing - RA
 
 #### **2019 Fall**
 
-STA 440 - Case Studies - Guest Lecturer on Web Scrapping
+STA 440 - Case Studies - Guest Lecturer on Web Scraping
 
 
