@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Christine Shen | Negative Numbers in Combinatorics</title>
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+  
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico?">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2021/Negative_Combinatorics/">
+</head>
+
+  
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        
+        <strong>Christine Shen</strong>
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="/">About</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">Posts</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="/projects/">Projects</a>
+          
+        
+          
+            <a class="page-link" href="/teaching/">Teaching</a>
+          
+        
+          
+        
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Negative Numbers in Combinatorics</h1>
+    <p class="post-meta">February 2, 2021</p>
+  </header>
+
+  <article class="post-content">
+    <p>I came across <em>Negative Numbers in Combinatorics</em> while working on STA 732 HW1.</p>
+
+<hr />
+
+<p>Suppose a set S has n elements, number of subsets of S of size k is:</p>
+
+<p>\begin{equation*}
+  {n \choose k}  = \frac{n(n-1) \dots (n-k+1)}{k!}.
+\end{equation*}</p>
+
+<p>Now if there were a set with -2 number of element, how many subsets of size 3 would it have? We can try naively applying the same formula:</p>
+
+<p>\begin{equation*}
+  {-2 \choose 3}  = \frac{(-2)(-3)(-4)}{3!} = -4.
+\end{equation*}</p>
+
+<p>This gives us a number, but how to understand it?</p>
+
+<p>Note that a <em>set</em>, by definition can only consist of unique elements. here we introduce the notion of multisets, with unbounded multiplicity. For example, the following are three different and yet valid multisets: {x,x}, {x,y}, and {y,y}.</p>
+
+<p>Now coming back to the question above, let S = {x,y}, where both x and y are “negative elements”, i.e., they can be selected more than once into a multiset. Then the unique subsets of S of size 3 are: {x,x,x}, {y,y,y}, {x,x,y}, {x,y,y}, a total of 4, which matches with the number 4 we got above. But what about the negative sign？ Here let’s say that a multiset with k negative elements has weight of \((-1)^k\). And hence we have</p>
+
+<p><strong>Theorem</strong>: For a set S with m negative elements, \({-m \choose k}\) is the sum of the weights of all the k-element multiset-subsets of S.</p>
+
+<p><strong>Proof</strong>:</p>
+
+\[\begin{aligned}
+  {-m \choose k}  &amp;= \frac{(-m)(-m-1) \dots (-m-k+1)}{k!} \\
+  &amp;= (-1)^k {m+k-1 \choose k}.
+\end{aligned}\]
+
+<p>Now we need to show that the number of unique multisets by choosing k from m elements, is indeed \({m+k-1 \choose k}\). We can use a counting method called “stars and bars”. This might be rather basic, but it’s the first time I come across this idea. I find it quite interesting.</p>
+
+<p>Now think about choosing k from 2 negative elements. As the order doesn’t matter here, this is equivalent to … imagine we have k stars, lying in one line</p>
+
+\[* * * \dots * * *\]
+
+<p>We want to put one bar in between to separate these stars into two groups, for example this is one possibility:</p>
+
+\[* | * * \dots * * *\]
+
+<p>How many different ways are there to place this bar? This is exactly equivalent to the problem above. Here there are a total of (k+1) places for me to place this bar, and hence it’s \({k+1 \choose 1} = {2+k-1 \choose 2-1}\) number of different possibilities. And if we generalize it an (m choose k) problem, obviously the answer is</p>
+
+\[{m+k-1 \choose m-1} = {m+k-1 \choose k}.\]
+
+<p>This completes the proof.</p>
+
+<p>This also works for hybrid sets, i.e., sets with both positive and negative elements:</p>
+<ul>
+  <li>a positive element can only be chosen once, with weight 1</li>
+  <li>a negative element can be chosen any number of times, with weight (-1)</li>
+</ul>
+
+<p>For example, consider a set S = {a, x, y} where a is a positive element, while x and y are negative elements. In total S has (-1) elements. So how many subsets (potentially multisets) of size 3 does S have?</p>
+
+<ol>
+  <li>For subsets with only negative elements, each subset/ multiset has weight of \((-1)^3 = (-1)\) and there are a total of 4 subsets</li>
+  <li>For subsets with one positive element a, and two negative elements, the weight is 1, and there are a total of 3 subsets.</li>
+  <li>All together, the sum of the weights of all the unique subsets is 3-4=-1. This is same as \(-1 \choose 3\).</li>
+</ol>
+
+<p><em>This is where I decided to stop. I did not try to further prove the case for hybrid sets.</em></p>
+
+<p>References:</p>
+<ul>
+  <li>For general understanding of this concept: http://faculty.uml.edu/jpropp/msri-up12.pdf</li>
+  <li>For the “stars and bars” technique: https://brilliant.org/wiki/integer-equations-star-and-bars/</li>
+</ul>
+
+  </article>
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2024 Christine Shen.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+
+
+
+<!-- Include custom icon fonts -->
+<!-- <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous" />
+
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-XXXXXXXXX', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+  </body>
+
+</html>
