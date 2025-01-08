@@ -5,6 +5,10 @@ title: Teaching
 #description: Materials for courses you taught. Replace this text with your description.
 ---
 
+#### **2025 Spring**
+
+STA 602 - Bayesian Statistical Modeling - TA
+
 #### **2023 Fall**
 
 STA 832 - Multivariate Analysis - TA<br />
