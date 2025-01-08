@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Christine Shen</title>
+  <title>Christine Shen | Auto-Encoding Variational Bayes</title>
   <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 ">
 
@@ -15,7 +15,7 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico?">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/projects/3_VAE/">
 </head>
 
   
@@ -97,24 +97,43 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Levitating</h1>
-  <h2>~ a place where my thoughts float ~</h2>
-</div>
+        <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Auto-Encoding Variational Bayes</h1>
+    <h5 class="post-description"></h5>
+  </header>
 
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title" href="/blog/2021/Negative_Combinatorics/">Negative Numbers in Combinatorics</a></h2>
-      <p class="post-meta">February 2, 2021 — 14:54</p>
-      <p>explorations</p>
-    </li>
-  
+  <article class="post-content Auto-Encoding Variational Bayes clearfix">
+    <p>This is the Final Project for STA 663 (2020 Spring). This is a group project where two of us implemented the basic Variational Auto-encoder algorithm described in <a href="https://arxiv.org/abs/1312.6114" target="_blank">Kingma and Welling (2013)</a>. This implementation uses a Gaussian MLP encoder and a Bernoulli MLP decoder. The set up is suitable for dataset like <a href="http://yann.lecun.com/exdb/mnist/" target="_blank">MNIST</a>.</p>
+
+<p>We also implemented a python package. It relies on <code class="language-plaintext highlighter-rouge">numpy</code>, <code class="language-plaintext highlighter-rouge">matplotlib</code> and <code class="language-plaintext highlighter-rouge">numba</code>.</p>
+
+<ul>
+  <li>
+    <p>To install:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">pip install -i https://test.pypi.org/simple/ VAE-christineymshen</code></p>
+  </li>
+  <li>
+    <p>To use the modules:</p>
+
+    <p><code class="language-plaintext highlighter-rouge">from VAE import VAE</code></p>
+  </li>
 </ul>
 
+<p>Refer to <a href="https://github.com/christineymshen/sta-663-FinalProj-VAE" target="_blank">this repo</a> for examples on how to use the package and the underlying codes. Alternatively can also refer to <a href="https://github.com/RV29/VAE" target="_blank">my friend’s repo</a> for a slightly different version of the package.</p>
+
+<p>The picture used for this project in the <a href="/projects/">Project page</a> was reconstructed by our model, based on random handwritten digit images after training with the MNIST dataset.</p>
 
 
+  </article>
+
+  
+
+  
+
+</div>
 
       </div>
     </div>
