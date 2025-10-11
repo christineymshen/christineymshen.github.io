@@ -7,7 +7,7 @@ title: Teaching
 
 #### **2025 Spring**
 
-STA 602 - Bayesian Statistical Modeling - TA
+STA 602 - Bayesian Statistical Modeling - TA<br />
 STA 725 - Bayesian Health Data Science - Guest Lecturer on Scalable GPs
 
 #### **2023 Fall**
