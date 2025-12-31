@@ -5,6 +5,10 @@ title: Teaching
 #description: Materials for courses you taught. Replace this text with your description.
 ---
 
+#### **2026 Spring**
+
+STA 725 - Bayesian Health Data Science - TA
+
 #### **2025 Spring**
 
 STA 602 - Bayesian Statistical Modeling - TA<br />
