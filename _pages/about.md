@@ -1,34 +1,29 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
-  enabled: true # includes a list of news items
+  enabled: false # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
+  enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am a fifth year Ph.D. candidate in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University, working with [Surya Tokdar](http://www2.stat.duke.edu/~st118/). I am also an [AI Health Fellow](https://aihealth.duke.edu) at Duke University School of Medicine. 
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I am interested in philosophical and foundational questions in statistics, and my research focuses on methodologies that are Bayesian in formulation, with strong frequentist guarantees. More broadly, my work touches on Bayesian methods and decision theory. My applied work is motivated by challenges in the clinical research, especially in the context of large and complex datasets such as the Electronic Health Records. 
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, tennis, and wall climbing. 
+
+#### **Education**
+
+B.B.A. in Insurance, Financial and Actuarial Analysis with Honours (2011), The Chinese University of Hong Kong <br />
+M.S. in Statistics (2021), Duke University
