@@ -17,11 +17,11 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a fifth year Ph.D. candidate in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University, working with [Surya Tokdar](http://www2.stat.duke.edu/~st118/). I am also an [AI Health Fellow](https://aihealth.duke.edu) at Duke University School of Medicine. 
+I am a fifth year Ph.D. candidate in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University, working with [Surya Tokdar](http://www2.stat.duke.edu/~st118/). I am also an [AI Health Fellow](https://aihealth.duke.edu) at Duke University School of Medicine.
 
-I am interested in philosophical and foundational questions in statistics, and my research focuses on methodologies that are Bayesian in formulation, with strong frequentist guarantees. More broadly, my work touches on Bayesian methods and decision theory. My applied work is motivated by challenges in the clinical research, especially in the context of large and complex datasets such as the Electronic Health Records. 
+I am interested in philosophical and foundational questions in statistics, and my research focuses on methodologies that are Bayesian in formulation, with strong frequentist guarantees. More broadly, my work touches on Bayesian methods and decision theory. My applied work is motivated by challenges in the clinical research, especially in the context of large and complex datasets such as the Electronic Health Records.
 
-Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, tennis, and wall climbing. 
+Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, tennis, and wall climbing.
 
 #### **Education**
 
