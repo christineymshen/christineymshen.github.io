@@ -9,8 +9,8 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
-          title: "Publications",
+  },{id: "nav-research",
+          title: "Research",
           description: "Publications may appear under Yueming Shen or Christine Shen.",
           section: "Navigation",
           handler: () => {
