@@ -13,7 +13,7 @@ calendar: false
 #### Instructor
 
 - Master's Virtual Math & Stat Bootcamp (Summer 2023)
-  - Revamped lecture materials for the virtual format
+  - Revamped lecture materials to adapt to the virtual format
   - Created over 20 pre-recorded videos on three learning modules [[Introduction](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=93cdf98f-5f09-4afd-8687-b03b012bb31e), [Linear Algebra](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=0a54cf25-073a-4ccf-91e0-b03301717487), [Calculus](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=de6ce0e1-0764-4d8d-87e3-b03800f1b2a0), [Probability](https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=c0cc199d-52df-46ca-8884-b03b012bad21)]
 - Master's Math & Stat Bootcamp (Summer 2022)
   - Delivered five lectures (2-3 hours each)

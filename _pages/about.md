@@ -17,13 +17,8 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a fifth year Ph.D. candidate in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University, working with [Surya Tokdar](http://www2.stat.duke.edu/~st118/). I am also an [AI Health Fellow](https://aihealth.duke.edu) at Duke University School of Medicine.
+I am a fifth year Ph.D. candidate in the [Department of Statistical Science](https://stat.duke.edu/) at Duke University, working with [Surya Tokdar](http://www2.stat.duke.edu/~st118/). I am also an [AI Health Fellow](https://aihealth.duke.edu) at Duke University School of Medicine. I received my Master's degree in Statistical Science at Duke University under the supervision of [Peter Hoff](https://pdhoff.github.io). Prior to that, I completed my undergraduate studies at [The Chinese University of Hong Kong](https://www.cuhk.edu.hk/english/), majoring in [Insurance, Financial and Actuarial Analysis](https://ifaa.bschool.cuhk.edu.hk), and worked in Hong Kong as an actuary.
 
-I am interested in philosophical and foundational questions in statistics, and my research focuses on methodologies that are Bayesian in formulation, with strong frequentist guarantees. More broadly, my work touches on Bayesian methods and decision theory. My applied work is motivated by challenges in the clinical research, especially in the context of large and complex datasets such as the Electronic Health Records.
+My research interests lie in philosophical and foundational questions in statistics, with a focus on methodologies that are Bayesian in formulation yet have strong frequentist guarantees. More broadly, my work touches on Bayesian methods and decision theory. My applied work is motivated by challenges in clinical research, especially in the context of large and complex datasets such as the Electronic Health Records.
 
 Outside of Statistics, a few things I've been enjoying doing regularly are: yoga, tennis, and wall climbing.
-
-#### **Education**
-
-B.B.A. in Insurance, Financial and Actuarial Analysis with Honours (2011), The Chinese University of Hong Kong <br />
-M.S. in Statistics (2021), Duke University
