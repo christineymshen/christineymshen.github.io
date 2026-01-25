@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: Publications
+title: Research
 description: "Publications may appear under Yueming Shen or Christine Shen."
 nav: true
 nav_order: 2
