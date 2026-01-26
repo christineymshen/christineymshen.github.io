@@ -2,7 +2,7 @@
 # the commented lines are the default social media links supported by the template
 # the socials will be displayed in the order they are defined here
 
-cv_pdf: /assets/pdf/CV_20260117.pdf # path to your CV PDF file
+cv_pdf: /assets/pdf/CV.pdf # path to your CV PDF file
 email: yueming.shen@duke.edu
 github_username: christineymshen
 linkedin_username: christine-ym-shen
