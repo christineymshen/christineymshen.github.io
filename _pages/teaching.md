@@ -40,14 +40,14 @@ calendar: false
 #### Teaching Assistant
 
 - [STA 602 - Bayesian Statistical Modeling](https://stat.duke.edu/courses/bayesian-statistical-modeling-and-data-analysis-1) ([Spring 2025](https://sta602-sp25.github.io), Fall 2020)
-  - Instructors: Alex Fisher, Li Ma
+  - Instructors: Alex Fisher (Spring 2025), Li Ma (Fall 2020)
 - [STA 832 - Multivariate Analysis](https://stat.duke.edu/courses/multivariate-statistical-analysis-0) (Fall 2023)
   - Instructor: Peter Hoff
-- [STA 732 - Statistical Inference](https://stat.duke.edu/courses/statistical-inference) (Spring 2023)
+- [STA 732 - Statistical Inference](https://stat.duke.edu/courses/statistical-inference) ([Spring 2023](https://www2.stat.duke.edu/courses/Spring23/sta732.01/))
   - Instructor: Yuansi Chen
-- [STA 199 - Intro to Data Science](https://stat.duke.edu/courses/introduction-data-science-and-statistical-thinking) (**Head TA**) ([Fall 2022](https://sta199-f22-2.github.io), [Fall 2021](https://sta199-f21-001.netlify.app))
-  - Instructors: Elijah Meyer, Alex Fisher
-- [STA 532 - Theory of Statistical Inference](https://stat.duke.edu/courses/theory-statistical-inference) (Spring 2021)
+- [STA 199 - Intro to Data Science](https://stat.duke.edu/courses/introduction-data-science-and-statistical-thinking) ([Fall 2022](https://sta199-f22-2.github.io), [Fall 2021](https://sta199-f21-001.netlify.app))(**Head TA**)
+  - Instructors: Elijah Meyer (Fall 2022), Alex Fisher (Fall 2021)
+- [STA 532 - Theory of Statistical Inference](https://stat.duke.edu/courses/theory-statistical-inference) ([Spring 2021](https://www2.stat.duke.edu/~st118/syllabus-sta532-2021spring.pdf))
   - Instructor: Surya Tokdar
 - STA [360](https://stat.duke.edu/courses/bayesian-inference-and-modern-statistical-methods-2) / [602](https://stat.duke.edu/courses/bayesian-statistical-modeling-and-data-analysis-1) - Bayesian Statistical Modeling ([Summer II 2020](https://sta-360-602l-su20.github.io/Course-Website/))
   - Instructor: Olanrewaju Michael Akande
