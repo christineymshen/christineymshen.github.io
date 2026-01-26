@@ -45,7 +45,7 @@ calendar: false
   - Instructor: Peter Hoff
 - [STA 732 - Statistical Inference](https://stat.duke.edu/courses/statistical-inference) ([Spring 2023](https://www2.stat.duke.edu/courses/Spring23/sta732.01/))
   - Instructor: Yuansi Chen
-- [STA 199 - Intro to Data Science](https://stat.duke.edu/courses/introduction-data-science-and-statistical-thinking) ([Fall 2022](https://sta199-f22-2.github.io), [Fall 2021](https://sta199-f21-001.netlify.app))(**Head TA**)
+- [STA 199 - Intro to Data Science](https://stat.duke.edu/courses/introduction-data-science-and-statistical-thinking) ([Fall 2022](https://sta199-f22-2.github.io), [Fall 2021](https://sta199-f21-001.netlify.app)) (**Head TA**)
   - Instructors: Elijah Meyer (Fall 2022), Alex Fisher (Fall 2021)
 - [STA 532 - Theory of Statistical Inference](https://stat.duke.edu/courses/theory-statistical-inference) ([Spring 2021](https://www2.stat.duke.edu/~st118/syllabus-sta532-2021spring.pdf))
   - Instructor: Surya Tokdar
