@@ -20,9 +20,9 @@ calendar: false
 
 #### Guest Lecturer
 
-- [STA 725 - Bayesian Health Data Science](https://stat.duke.edu/courses/bayesian-health-data-science) ([Spring 2025](https://biostat725-sp25.netlify.app))
+- [STA 725 - Bayesian Health Data Science](https://stat.duke.edu/courses/bayesian-health-data-science) ([Spring 2025](https://biostat725-sp25.netlify.app), [Spring 2026](https://biostat725-sp26.netlify.app))
   - Instructor: Samuel Berchuck
-  - Developed and delivered two lectures on Scalable GPs [[Lecture 1](https://biostat725-sp25.netlify.app/slides/21-scalable-1#/title-slide), [Lecture 2](https://biostat725-sp25.netlify.app/slides/22-scalable-2#/title-slide)]
+  - Developed and delivered two lectures on Scalable GPs [[2025 Lecture 1](https://biostat725-sp25.netlify.app/slides/21-scalable-1#/title-slide), [2025 Lecture 2](https://biostat725-sp25.netlify.app/slides/22-scalable-2#/title-slide), [2026 Lecture 1](https://biostat725-sp26.netlify.app/slides/18-scalable-1#/title-slide), [2026 Lecture 2](https://biostat725-sp26.netlify.app/slides/19-scalable-2#/title-slide)]
 
 - [STA 440 - Case Studies](https://stat.duke.edu/courses/case-studies-practice-statistics-1) (Fall 2019)
   - Instructor: Fan Li
